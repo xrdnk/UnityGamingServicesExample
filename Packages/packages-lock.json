@@ -72,7 +72,7 @@
     },
     "com.unity.services.authentication": {
       "version": "1.0.0-pre.6",
-      "depth": 1,
+      "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.nuget.newtonsoft-json": "2.0.0",
