@@ -1,6 +1,6 @@
 ## Description
 
-This is Examples for Unity Game Services.
+This is Examples for Unity Gaming Services.
 
 The following example has been implemented.
 
