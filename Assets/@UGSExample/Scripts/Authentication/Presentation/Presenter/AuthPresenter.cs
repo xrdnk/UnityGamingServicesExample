@@ -38,7 +38,7 @@ namespace Denicode.UGSExample.Authentication.Presenter
                     .AddTo(_cd);
 
                 _authService.OnSignedInAsObservable()
-                    .Subscribe(tupleValue => _authView.DisplaySignedInResult(tupleValue.isSuccess, tupleValue.playerId))
+                    .Subscribe(tupleValue => _authView.DisplaySignedInResult(tupleValue.isSuccess, tupleValue.playerId).Forget())
                     .AddTo(_cd);
 
                 _authService.OnSingedOutAsObservable()

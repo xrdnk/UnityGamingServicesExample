@@ -1,11 +1,13 @@
 using System;
+using Cysharp.Threading.Tasks;
+using Shared.UIViewBase;
 using UniRx;
 using UnityEngine.UI;
 using UnityEngine;
 
 namespace Denicode.UGSExample.Authentication.UIView
 {
-    public class AuthView : MonoBehaviour
+    public sealed class AuthView : UIViewBase
     {
         [SerializeField] Text _textAuthResult;
         [SerializeField] Button _buttonSignIn;
@@ -17,9 +19,12 @@ namespace Denicode.UGSExample.Authentication.UIView
         readonly Subject<Unit> _signOutSubject = new Subject<Unit>();
         public IObservable<Unit> OnSignOutTriggerAsObservable() => _signOutSubject;
 
+        readonly Subject<Unit> _displayedSignedInSubject = new Subject<Unit>();
+        public IObservable<Unit> OnDisplayedTriggerAsObservable() => _displayedSignedInSubject;
+
         readonly BoolReactiveProperty _isSignedInRp = new BoolReactiveProperty(false);
 
-        void Awake()
+        protected override void Awake()
         {
             _buttonSignIn.OnClickAsObservable()
                 .Subscribe(_ => _signInSubject.OnNext(Unit.Default))
@@ -38,12 +43,14 @@ namespace Denicode.UGSExample.Authentication.UIView
                 .AddTo(this);
         }
 
-        public void DisplaySignedInResult(bool isSignedIn, string playerId)
+        public async UniTaskVoid DisplaySignedInResult(bool isSignedIn, string playerId)
         {
             _textAuthResult.text = isSignedIn
                 ? $"<color=green>サインインしました\nID:{playerId}</color>"
                 : "<color=red>サインインできませんでした</color>";
             _isSignedInRp.Value = isSignedIn;
+            await UniTask.Delay(TimeSpan.FromSeconds(1f));
+            _displayedSignedInSubject.OnNext(Unit.Default);
         }
 
         public void DisplaySignedOutResult()
