@@ -13,8 +13,8 @@ namespace Denicode.UGSExample.CloudSave.Presentation.UIView
     {
         [SerializeField] InputField _inputFieldName;
         [SerializeField] InputField _inputFieldAge;
-
         [SerializeField] Dropdown _dropdownDataType;
+
         [SerializeField] Button _buttonSaveData;
         [SerializeField] Button _buttonReadData;
         [SerializeField] Button _buttonDeleteData;
