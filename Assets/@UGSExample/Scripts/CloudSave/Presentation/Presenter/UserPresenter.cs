@@ -5,7 +5,7 @@ using Denicode.UGSExample.CloudSave.Presentation.UIView;
 using Denicode.UGSExample.Shared.Progression;
 using UniRx;
 
-namespace CloudSave.Presentation.Presenter
+namespace Denicode.UGSExample.CloudSave.Presentation.Presenter
 {
     public sealed class UserPresenter : IPeriod
     {

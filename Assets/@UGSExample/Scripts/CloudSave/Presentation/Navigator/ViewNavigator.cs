@@ -3,7 +3,7 @@ using Denicode.UGSExample.CloudSave.Presentation.UIView;
 using Denicode.UGSExample.Shared.Progression;
 using UniRx;
 
-namespace Denicode.UGSExample.CloudSave.Application.Navigator
+namespace Denicode.UGSExample.CloudSave.Presentation.Navigator
 {
     public sealed class ViewNavigator : IPeriod
     {

@@ -1,12 +1,12 @@
 using System.Collections.Generic;
-using CloudSave.Presentation.Presenter;
 using Denicode.UGSExample.Authentication.Domain.Service;
 using Denicode.UGSExample.Authentication.Presenter;
 using Denicode.UGSExample.Authentication.UIView;
 using Denicode.UGSExample.CloudSave.Application.AppService;
-using Denicode.UGSExample.CloudSave.Application.Navigator;
 using Denicode.UGSExample.CloudSave.Domain.Repository;
 using Denicode.UGSExample.CloudSave.Infrastructure.Repository;
+using Denicode.UGSExample.CloudSave.Presentation.Navigator;
+using Denicode.UGSExample.CloudSave.Presentation.Presenter;
 using Denicode.UGSExample.CloudSave.Presentation.UIView;
 using Denicode.UGSExample.Shared.Progression;
 using Zenject;
