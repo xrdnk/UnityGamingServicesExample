@@ -18,9 +18,14 @@ namespace Denicode.UGSExample.CloudSave.Application.AppService
             _userDataRepository = userDataRepository;
         }
 
-        public async UniTask<object> Handle(string userId)
+        public async UniTask<object> Handle(string key)
         {
-            return await _userDataRepository.Read(userId);
+            return await _userDataRepository.Read(key);
+        }
+
+        public async UniTask<object> Handle<T>(string key) where T : class
+        {
+            return await _userDataRepository.Read<T>(key);
         }
     }
 }

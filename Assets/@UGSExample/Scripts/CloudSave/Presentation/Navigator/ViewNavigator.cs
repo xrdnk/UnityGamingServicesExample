@@ -26,12 +26,12 @@ namespace Denicode.UGSExample.CloudSave.Application.Navigator
         {
             Init();
 
-            _authView.OnDisplayedTriggerAsObservable()
-                .Subscribe(_ =>
-                {
-                    _authView.Hide();
-                    _userView.Show();
-                })
+            _authView.OnDisplayedSignedInTriggerAsObservable()
+                .Subscribe(_ => _userView.Show())
+                .AddTo(_cd);
+
+            _authView.OnDisplayedSignedOutTriggerAsObservable()
+                .Subscribe(_ => _userView.Hide())
                 .AddTo(_cd);
         }
 

@@ -3,13 +3,14 @@
 namespace Denicode.UGSExample.CloudSave.Application.AppService
 {
     /// <summary>
-    /// ユーザデータ登録用のアプリケーションサービス
+    /// ユーザデータ保存用のアプリケーションサービス
+    /// Create と Update を兼ねる
     /// </summary>
-    public sealed class UserDataCreateService
+    public sealed class UserDataSaveService
     {
         readonly IUserDataRepository _userDataRepository;
 
-        public UserDataCreateService
+        public UserDataSaveService
         (
             IUserDataRepository userDataRepository
         )

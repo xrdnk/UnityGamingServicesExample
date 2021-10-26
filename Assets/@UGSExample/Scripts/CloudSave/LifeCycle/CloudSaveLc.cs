@@ -6,7 +6,6 @@ using Denicode.UGSExample.Authentication.UIView;
 using Denicode.UGSExample.CloudSave.Application.AppService;
 using Denicode.UGSExample.CloudSave.Application.Navigator;
 using Denicode.UGSExample.CloudSave.Domain.Repository;
-using Denicode.UGSExample.CloudSave.Domain.Service;
 using Denicode.UGSExample.CloudSave.Infrastructure.Repository;
 using Denicode.UGSExample.CloudSave.Presentation.UIView;
 using Denicode.UGSExample.Shared.Progression;
@@ -20,14 +19,12 @@ namespace Denicode.UGSExample.Authentication.LifeCycle
         {
             // Domain
             Container.BindInterfacesAndSelfTo<AuthService>().AsSingle();
-            Container.Bind<UserDataService>().AsSingle();
 
             Container.Bind<IUserDataRepository>().To<CloudSaveUserDataRepository>().AsSingle();
 
             // Application
-            Container.Bind<UserDataCreateService>().AsSingle();
+            Container.Bind<UserDataSaveService>().AsSingle();
             Container.Bind<UserDataReadService>().AsSingle();
-            Container.Bind<UserDataUpdateService>().AsSingle();
             Container.Bind<UserDataDeleteService>().AsSingle();
 
             // Presentation

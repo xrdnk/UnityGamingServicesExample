@@ -1,6 +1,6 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using CloudSave.Application.Enumerate;
 using Denicode.UGSExample.CloudSave.Application.AppService;
-using Denicode.UGSExample.CloudSave.Application.Constant;
+using Denicode.UGSExample.CloudSave.Domain.Entity;
 using Denicode.UGSExample.CloudSave.Presentation.UIView;
 using Denicode.UGSExample.Shared.Progression;
 using UniRx;
@@ -9,25 +9,22 @@ namespace CloudSave.Presentation.Presenter
 {
     public sealed class UserPresenter : IPeriod
     {
-        readonly UserDataCreateService _userDataCreateService;
+        readonly UserDataSaveService _userDataSaveService;
         readonly UserDataReadService _userDataReadService;
-        readonly UserDataUpdateService _userDataUpdateService;
         readonly UserDataDeleteService _userDataDeleteService;
         readonly UserView _userView;
         readonly CompositeDisposable _cd;
 
         public UserPresenter
         (
-            UserDataCreateService userDataCreateService,
+            UserDataSaveService userDataSaveService,
             UserDataReadService userDataReadService,
-            UserDataUpdateService userDataUpdateService,
             UserDataDeleteService userDataDeleteService,
             UserView userView
         )
         {
-            _userDataCreateService = userDataCreateService;
+            _userDataSaveService = userDataSaveService;
             _userDataReadService = userDataReadService;
-            _userDataUpdateService = userDataUpdateService;
             _userDataDeleteService = userDataDeleteService;
             _userView = userView;
             _cd = new CompositeDisposable();
@@ -36,11 +33,25 @@ namespace CloudSave.Presentation.Presenter
         void IOrigination.Originate()
         {
             _userView.OnCreateTriggerAsObservable()
-                .Subscribe(name => _userDataCreateService.Handle(CloudSaveConstants.USER_NAME_KEY, name))
+                .Subscribe(valueTuple => _userDataSaveService.Handle(valueTuple.Item1.ToString(), valueTuple.Item2))
+                .AddTo(_cd);
+
+            _userView.OnReadTriggerAsObservable()
+                .Subscribe(dataType =>
+                {
+                    if (dataType == DataType.User)
+                    {
+                        _ = _userDataReadService.Handle<UserData>(dataType.ToString());
+                    }
+                    else
+                    {
+                        _ = _userDataReadService.Handle(dataType.ToString());
+                    }
+                })
                 .AddTo(_cd);
 
             _userView.OnDeleteTriggerAsObservable()
-                .Subscribe(_ => _userDataDeleteService.Handle(CloudSaveConstants.USER_NAME_KEY))
+                .Subscribe(dataType => _userDataDeleteService.Handle(dataType.ToString()))
                 .AddTo(_cd);
         }
 

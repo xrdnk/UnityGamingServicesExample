@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
 
 namespace Denicode.UGSExample.CloudSave.Domain.Repository
 {
@@ -9,12 +8,16 @@ namespace Denicode.UGSExample.CloudSave.Domain.Repository
     public interface IUserDataRepository
     {
         /// <summary>
-        /// Read
+        /// Read Primitive
         /// </summary>
         /// <returns>PlayerPrefsKey に該当するデータ</returns>
         UniTask<object> Read(string key);
 
-        UniTask<List<object>> ReadAll();
+        /// <summary>
+        /// Read SerializedClass
+        /// </summary>
+        /// <returns>PlayerPrefsKey に該当するデータ</returns>
+        UniTask<object> Read<T>(string key) where T : class;
 
         /// <summary>
         /// Create & Save
