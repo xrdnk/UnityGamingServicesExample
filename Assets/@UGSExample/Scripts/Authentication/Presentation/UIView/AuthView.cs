@@ -20,9 +20,13 @@ namespace Denicode.UGSExample.Authentication.UIView
         public IObservable<Unit> OnSignOutTriggerAsObservable() => _signOutSubject;
 
         readonly Subject<Unit> _displayedSignedInSubject = new Subject<Unit>();
-        public IObservable<Unit> OnDisplayedTriggerAsObservable() => _displayedSignedInSubject;
+        public IObservable<Unit> OnDisplayedSignedInTriggerAsObservable() => _displayedSignedInSubject;
+
+        readonly Subject<Unit> _displayedSignedOutSubject = new Subject<Unit>();
+        public IObservable<Unit> OnDisplayedSignedOutTriggerAsObservable() => _displayedSignedOutSubject;
 
         readonly BoolReactiveProperty _isSignedInRp = new BoolReactiveProperty(false);
+
 
         protected override void Awake()
         {
@@ -57,6 +61,7 @@ namespace Denicode.UGSExample.Authentication.UIView
         {
             _textAuthResult.text = "<color=green>サインアウトしました</color>";
             _isSignedInRp.Value = false;
+            _displayedSignedOutSubject.OnNext(Unit.Default);
         }
     }
 }
