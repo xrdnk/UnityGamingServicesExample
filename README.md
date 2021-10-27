@@ -9,7 +9,7 @@ The following example has been implemented.
 
 ## Dependencies
 
-* Unity 2021.1.26f1
+* Unity 2021.2.0f1
 
 ## Third Party Assets
 
