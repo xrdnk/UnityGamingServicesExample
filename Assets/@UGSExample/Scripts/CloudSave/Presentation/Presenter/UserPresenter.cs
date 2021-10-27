@@ -39,14 +39,7 @@ namespace Denicode.UGSExample.CloudSave.Presentation.Presenter
             _userView.OnReadTriggerAsObservable()
                 .Subscribe(dataType =>
                 {
-                    if (dataType == DataType.User)
-                    {
-                        _ = _userDataReadService.Handle<UserData>(dataType.ToString());
-                    }
-                    else
-                    {
-                        _ = _userDataReadService.Handle(dataType.ToString());
-                    }
+                    _ = dataType == DataType.User ? _userDataReadService.Handle<UserData>(dataType.ToString()) : _userDataReadService.Handle(dataType.ToString());
                 })
                 .AddTo(_cd);
 
