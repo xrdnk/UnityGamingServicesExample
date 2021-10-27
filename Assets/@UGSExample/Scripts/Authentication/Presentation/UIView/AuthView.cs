@@ -13,19 +13,19 @@ namespace Denicode.UGSExample.Authentication.UIView
         [SerializeField] Button _buttonSignIn;
         [SerializeField] Button _buttonSignOut;
 
-        readonly Subject<Unit> _signInSubject = new Subject<Unit>();
+        readonly Subject<Unit> _signInSubject = new();
         public IObservable<Unit> OnSignInTriggerAsObservable() => _signInSubject;
 
-        readonly Subject<Unit> _signOutSubject = new Subject<Unit>();
+        readonly Subject<Unit> _signOutSubject = new();
         public IObservable<Unit> OnSignOutTriggerAsObservable() => _signOutSubject;
 
-        readonly Subject<Unit> _displayedSignedInSubject = new Subject<Unit>();
+        readonly Subject<Unit> _displayedSignedInSubject = new();
         public IObservable<Unit> OnDisplayedSignedInTriggerAsObservable() => _displayedSignedInSubject;
 
-        readonly Subject<Unit> _displayedSignedOutSubject = new Subject<Unit>();
+        readonly Subject<Unit> _displayedSignedOutSubject = new();
         public IObservable<Unit> OnDisplayedSignedOutTriggerAsObservable() => _displayedSignedOutSubject;
 
-        readonly BoolReactiveProperty _isSignedInRp = new BoolReactiveProperty(false);
+        readonly BoolReactiveProperty _isSignedInRp = new(false);
 
 
         protected override void Awake()

@@ -37,7 +37,7 @@ namespace Denicode.UGSExample.Authentication.LifeCycle
             Container.Bind<UserView>().FromComponentInHierarchy().AsSingle();
         }
 
-        List<IPeriod> _periods = new List<IPeriod>();
+        List<IPeriod> _periods = new();
 
         void Awake()
         {

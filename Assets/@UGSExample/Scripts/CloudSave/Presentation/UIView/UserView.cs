@@ -19,14 +19,14 @@ namespace Denicode.UGSExample.CloudSave.Presentation.UIView
         [SerializeField] Button _buttonReadData;
         [SerializeField] Button _buttonDeleteData;
 
-        readonly Subject<DataType> _readSubject = new Subject<DataType>();
+        readonly Subject<DataType> _readSubject = new();
         public IObservable<DataType> OnReadTriggerAsObservable() => _readSubject;
 
         // NOTE: 面倒なのでここでは object 型にしている
-        readonly Subject<(DataType, object)> _createSubject = new Subject<(DataType, object)>();
+        readonly Subject<(DataType, object)> _createSubject = new();
         public IObservable<(DataType, object)> OnCreateTriggerAsObservable() => _createSubject;
 
-        readonly Subject<DataType> _deleteSubject = new Subject<DataType>();
+        readonly Subject<DataType> _deleteSubject = new();
         public IObservable<DataType> OnDeleteTriggerAsObservable() => _deleteSubject;
 
         DataType DropDownDataTypeValue => (DataType)Enum.Parse(typeof(DataType), $"{_dropdownDataType.value}");

@@ -18,10 +18,10 @@ namespace Denicode.UGSExample.Authentication.Domain.Service
         public string PlayerId => AuthenticationService.Instance.PlayerId;
         public string AccessToken => AuthenticationService.Instance.AccessToken;
 
-        readonly Subject<(bool isSuccess, string playerId)> _signedInSubject = new Subject<(bool, string)>();
+        readonly Subject<(bool isSuccess, string playerId)> _signedInSubject = new();
         public IObservable<(bool isSuccess, string playerId)> OnSignedInAsObservable() => _signedInSubject;
 
-        readonly Subject<Unit> _signedOutSubject = new Subject<Unit>();
+        readonly Subject<Unit> _signedOutSubject = new();
         public IObservable<Unit> OnSingedOutAsObservable() => _signedOutSubject;
 
         /// <summary>
