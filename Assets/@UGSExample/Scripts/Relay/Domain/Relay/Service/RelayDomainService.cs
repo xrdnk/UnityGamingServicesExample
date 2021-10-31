@@ -24,7 +24,7 @@ namespace Denicode.UGSExample.RelayService.Domain.Service
         public async UniTask<List<Region>> GetRegionsAsync() => await Relay.Instance.ListRegionsAsync();
 
         /// <summary>
-        /// アロケーションの生成
+        /// アロケーション (Unity Relay の論理セッション) の生成
         /// </summary>
         /// <param name="maxConnections">最大接続数</param>
         /// <param name="regionId">リージョンID</param>
