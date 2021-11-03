@@ -153,6 +153,24 @@ namespace Deniverse.UGSExample.LobbyService.Domain.Service
         }
 
         /// <summary>
+        /// 過去に入室したことがあるロビーID一覧の取得処理
+        /// </summary>
+        /// <returns>過去に入室したことがあるロビーID一覧</returns>
+        /// <exception cref="LobbyServiceException">LobbyServiceException</exception>
+        public async UniTask<List<string>> GetJoinedLobbiesAsync()
+        {
+            try
+            {
+                return await Lobbies.Instance.GetJoinedLobbiesAsync();
+            }
+            catch (LobbyServiceException lse)
+            {
+                Debug.LogError(lse);
+                throw new LobbyServiceException(lse);
+            }
+        }
+
+        /// <summary>
         /// ロビーIDを用いた入室処理 (JOIN LOBBY)
         /// </summary>
         /// <param name="lobbyId">ロビーID</param>
