@@ -1,17 +1,17 @@
 using System.Collections.Generic;
-using Denicode.UGSExample.Authentication.Domain.Service;
-using Denicode.UGSExample.Authentication.Presenter;
-using Denicode.UGSExample.Authentication.UIView;
-using Denicode.UGSExample.CloudSave.Application.AppService;
-using Denicode.UGSExample.CloudSave.Domain.Repository;
-using Denicode.UGSExample.CloudSave.Infrastructure.Repository;
-using Denicode.UGSExample.CloudSave.Presentation.Navigator;
-using Denicode.UGSExample.CloudSave.Presentation.Presenter;
-using Denicode.UGSExample.CloudSave.Presentation.UIView;
-using Denicode.UGSExample.Shared.Progression;
+using Deniverse.UGSExample.Authentication.Domain.Service;
+using Deniverse.UGSExample.Authentication.Presenter;
+using Deniverse.UGSExample.Authentication.UIView;
+using Deniverse.UGSExample.CloudSave.Application.AppService;
+using Deniverse.UGSExample.CloudSave.Domain.Repository;
+using Deniverse.UGSExample.CloudSave.Infrastructure.Repository;
+using Deniverse.UGSExample.CloudSave.Presentation.Navigator;
+using Deniverse.UGSExample.CloudSave.Presentation.Presenter;
+using Deniverse.UGSExample.CloudSave.Presentation.UIView;
+using Deniverse.UGSExample.Shared.Progression;
 using Zenject;
 
-namespace Denicode.UGSExample.Authentication.LifeCycle
+namespace Deniverse.UGSExample.Authentication.LifeCycle
 {
     public class CloudSaveLc : MonoInstaller
     {

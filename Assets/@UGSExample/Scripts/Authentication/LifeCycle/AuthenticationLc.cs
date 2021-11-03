@@ -1,10 +1,10 @@
-using Denicode.UGSExample.Authentication.Domain.Service;
-using Denicode.UGSExample.Authentication.Presenter;
-using Denicode.UGSExample.Authentication.UIView;
-using Denicode.UGSExample.Shared.Progression;
+using Deniverse.UGSExample.Authentication.Domain.Service;
+using Deniverse.UGSExample.Authentication.Presenter;
+using Deniverse.UGSExample.Authentication.UIView;
+using Deniverse.UGSExample.Shared.Progression;
 using Zenject;
 
-namespace Denicode.UGSExample.Authentication.LifeCycle
+namespace Deniverse.UGSExample.Authentication.LifeCycle
 {
     public class AuthenticationLc : MonoInstaller
     {

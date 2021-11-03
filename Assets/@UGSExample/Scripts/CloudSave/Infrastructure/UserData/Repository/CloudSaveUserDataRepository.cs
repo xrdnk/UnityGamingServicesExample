@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
-using Denicode.UGSExample.CloudSave.Domain.Repository;
+using Deniverse.UGSExample.CloudSave.Domain.Repository;
 using Unity.Services.CloudSave;
 using UnityEngine;
 
-namespace Denicode.UGSExample.CloudSave.Infrastructure.Repository
+namespace Deniverse.UGSExample.CloudSave.Infrastructure.Repository
 {
     public sealed class CloudSaveUserDataRepository : IUserDataRepository
     {

@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Denicode.UGSExample.Shared.UIViewBase;
+using Deniverse.UGSExample.Shared.UIViewBase;
 using UniRx;
 using UniRx.Triggers;
 using Unity.Services.Relay.Models;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Denicode.UGSExample.RelayService.Presentation.View
+namespace Deniverse.UGSExample.RelayService.Presentation.View
 {
     public sealed class RelayView : UIViewBase
     {

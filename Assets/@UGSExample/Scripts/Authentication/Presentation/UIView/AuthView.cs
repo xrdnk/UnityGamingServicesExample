@@ -1,11 +1,11 @@
 using System;
 using Cysharp.Threading.Tasks;
-using Denicode.UGSExample.Shared.UIViewBase;
+using Deniverse.UGSExample.Shared.UIViewBase;
 using UniRx;
 using UnityEngine.UI;
 using UnityEngine;
 
-namespace Denicode.UGSExample.Authentication.UIView
+namespace Deniverse.UGSExample.Authentication.UIView
 {
     public sealed class AuthView : UIViewBase
     {

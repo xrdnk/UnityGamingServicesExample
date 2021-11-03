@@ -1,9 +1,9 @@
-using Denicode.UGSExample.Authentication.UIView;
-using Denicode.UGSExample.RelayService.Presentation.View;
-using Denicode.UGSExample.Shared.Progression;
+using Deniverse.UGSExample.Authentication.UIView;
+using Deniverse.UGSExample.RelayService.Presentation.View;
+using Deniverse.UGSExample.Shared.Progression;
 using UniRx;
 
-namespace Denicode.UGSExample.RelayService.Presentation.Navigator
+namespace Deniverse.UGSExample.RelayService.Presentation.Navigator
 {
     public sealed class RelayNavigator : IPeriod
     {

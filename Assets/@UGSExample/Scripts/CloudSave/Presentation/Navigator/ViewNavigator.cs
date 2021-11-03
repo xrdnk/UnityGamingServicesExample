@@ -1,9 +1,9 @@
-using Denicode.UGSExample.Authentication.UIView;
-using Denicode.UGSExample.CloudSave.Presentation.UIView;
-using Denicode.UGSExample.Shared.Progression;
+using Deniverse.UGSExample.Authentication.UIView;
+using Deniverse.UGSExample.CloudSave.Presentation.UIView;
+using Deniverse.UGSExample.Shared.Progression;
 using UniRx;
 
-namespace Denicode.UGSExample.CloudSave.Presentation.Navigator
+namespace Deniverse.UGSExample.CloudSave.Presentation.Navigator
 {
     public sealed class ViewNavigator : IPeriod
     {

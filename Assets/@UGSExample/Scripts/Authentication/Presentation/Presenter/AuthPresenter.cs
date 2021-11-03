@@ -1,10 +1,10 @@
 using Cysharp.Threading.Tasks;
-using Denicode.UGSExample.Authentication.Domain.Service;
-using Denicode.UGSExample.Authentication.UIView;
-using Denicode.UGSExample.Shared.Progression;
+using Deniverse.UGSExample.Authentication.Domain.Service;
+using Deniverse.UGSExample.Authentication.UIView;
+using Deniverse.UGSExample.Shared.Progression;
 using UniRx;
 
-namespace Denicode.UGSExample.Authentication.Presenter
+namespace Deniverse.UGSExample.Authentication.Presenter
 {
     public sealed class AuthPresenter : IPeriod
     {

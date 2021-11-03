@@ -1,4 +1,4 @@
-﻿namespace Denicode.UGSExample.Shared.Progression
+﻿namespace Deniverse.UGSExample.Shared.Progression
 {
     public interface ITermination
     {

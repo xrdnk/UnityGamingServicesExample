@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Denicode.UGSExample.CloudSave.Domain.Entity
+namespace Deniverse.UGSExample.CloudSave.Domain.Entity
 {
     /// <summary>
     /// ユーザ情報

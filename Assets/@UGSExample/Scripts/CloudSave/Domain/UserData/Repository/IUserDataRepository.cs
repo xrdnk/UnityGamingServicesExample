@@ -1,6 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 
-namespace Denicode.UGSExample.CloudSave.Domain.Repository
+namespace Deniverse.UGSExample.CloudSave.Domain.Repository
 {
     /// <summary>
     /// ユーザデータ永続化のためのリポジトリクラス

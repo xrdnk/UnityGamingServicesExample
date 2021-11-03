@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using CloudSave.Application.Enumerate;
-using Denicode.UGSExample.CloudSave.Domain.Entity;
-using Denicode.UGSExample.Shared.UIViewBase;
+using Deniverse.UGSExample.CloudSave.Domain.Entity;
+using Deniverse.UGSExample.Shared.UIViewBase;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Denicode.UGSExample.CloudSave.Presentation.UIView
+namespace Deniverse.UGSExample.CloudSave.Presentation.UIView
 {
     public sealed class UserView : UIViewBase
     {

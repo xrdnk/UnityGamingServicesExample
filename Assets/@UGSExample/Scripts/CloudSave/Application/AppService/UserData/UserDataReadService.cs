@@ -1,7 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
-using Denicode.UGSExample.CloudSave.Domain.Repository;
+using Deniverse.UGSExample.CloudSave.Domain.Repository;
 
-namespace Denicode.UGSExample.CloudSave.Application.AppService
+namespace Deniverse.UGSExample.CloudSave.Application.AppService
 {
     /// <summary>
     /// ユーザデータ取得用のアプリケーションサービス

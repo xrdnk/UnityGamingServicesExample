@@ -6,7 +6,7 @@ using Unity.Services.Lobbies;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
 
-namespace Denicode.UGSExample.LobbyService.Domain.Service
+namespace Deniverse.UGSExample.LobbyService.Domain.Service
 {
     public sealed class LobbyDomainService
     {

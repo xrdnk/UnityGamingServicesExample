@@ -1,15 +1,15 @@
 using System.Collections.Generic;
-using Denicode.UGSExample.Authentication.Domain.Service;
-using Denicode.UGSExample.Authentication.Presenter;
-using Denicode.UGSExample.Authentication.UIView;
-using Denicode.UGSExample.RelayService.Domain.Service;
-using Denicode.UGSExample.RelayService.Presentation.Navigator;
-using Denicode.UGSExample.RelayService.Presentation.Presenter;
-using Denicode.UGSExample.RelayService.Presentation.View;
-using Denicode.UGSExample.Shared.Progression;
+using Deniverse.UGSExample.Authentication.Domain.Service;
+using Deniverse.UGSExample.Authentication.Presenter;
+using Deniverse.UGSExample.Authentication.UIView;
+using Deniverse.UGSExample.RelayService.Domain.Service;
+using Deniverse.UGSExample.RelayService.Presentation.Navigator;
+using Deniverse.UGSExample.RelayService.Presentation.Presenter;
+using Deniverse.UGSExample.RelayService.Presentation.View;
+using Deniverse.UGSExample.Shared.Progression;
 using Zenject;
 
-namespace Denicode.UGSExample.RelayService.LifeCycle
+namespace Deniverse.UGSExample.RelayService.LifeCycle
 {
     public class RelayLc : MonoInstaller
     {

@@ -1,11 +1,11 @@
 ﻿using CloudSave.Application.Enumerate;
-using Denicode.UGSExample.CloudSave.Application.AppService;
-using Denicode.UGSExample.CloudSave.Domain.Entity;
-using Denicode.UGSExample.CloudSave.Presentation.UIView;
-using Denicode.UGSExample.Shared.Progression;
+using Deniverse.UGSExample.CloudSave.Application.AppService;
+using Deniverse.UGSExample.CloudSave.Domain.Entity;
+using Deniverse.UGSExample.CloudSave.Presentation.UIView;
+using Deniverse.UGSExample.Shared.Progression;
 using UniRx;
 
-namespace Denicode.UGSExample.CloudSave.Presentation.Presenter
+namespace Deniverse.UGSExample.CloudSave.Presentation.Presenter
 {
     public sealed class UserPresenter : IPeriod
     {

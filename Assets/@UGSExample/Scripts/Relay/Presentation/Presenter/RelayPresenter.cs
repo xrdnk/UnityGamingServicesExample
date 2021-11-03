@@ -1,11 +1,11 @@
 using Cysharp.Threading.Tasks;
-using Denicode.UGSExample.Authentication.Domain.Service;
-using Denicode.UGSExample.RelayService.Domain.Service;
-using Denicode.UGSExample.RelayService.Presentation.View;
-using Denicode.UGSExample.Shared.Progression;
+using Deniverse.UGSExample.Authentication.Domain.Service;
+using Deniverse.UGSExample.RelayService.Domain.Service;
+using Deniverse.UGSExample.RelayService.Presentation.View;
+using Deniverse.UGSExample.Shared.Progression;
 using UniRx;
 
-namespace Denicode.UGSExample.RelayService.Presentation.Presenter
+namespace Deniverse.UGSExample.RelayService.Presentation.Presenter
 {
     public sealed class RelayPresenter : IPeriod
     {

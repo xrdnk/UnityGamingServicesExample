@@ -1,12 +1,12 @@
 using System;
 using Cysharp.Threading.Tasks;
-using Denicode.UGSExample.Shared.Progression;
+using Deniverse.UGSExample.Shared.Progression;
 using UniRx;
 using Unity.Services.Authentication;
 using Unity.Services.Core;
 using UnityEngine;
 
-namespace Denicode.UGSExample.Authentication.Domain.Service
+namespace Deniverse.UGSExample.Authentication.Domain.Service
 {
     /// <summary>
     /// UGS を用いた認証サービス
