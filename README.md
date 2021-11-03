@@ -6,6 +6,7 @@ The following example has been implemented.
 
 - Unity Authentication
 - Unity Cloud Save
+- Unity Relay
 
 ## Dependencies
 
