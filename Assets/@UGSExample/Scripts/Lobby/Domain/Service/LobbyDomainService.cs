@@ -10,6 +10,7 @@ namespace Deniverse.UGSExample.LobbyService.Domain.Service
 {
     public sealed class LobbyDomainService
     {
+        // ハートビート送信は30秒間に5回というレート制限があるので，6以上の場合は6にクランプした方がいいかもしれない
         const int MIN_HEARTBEAT_DURATION = 6;
 
         /// <summary>
@@ -85,6 +86,30 @@ namespace Deniverse.UGSExample.LobbyService.Domain.Service
                 Debug.LogError(lse);
                 throw new LobbyServiceException(lse);
             }
+        }
+
+        /// <summary>
+        /// ロビー作成とハートビート定期送信処理を行う
+        /// </summary>
+        /// <param name="lobbyName">ロビー名</param>
+        /// <param name="maxPlayers">最大参加人数</param>
+        /// <param name="options">ロビー作成設定</param>
+        /// <param name="heartBeatDuration">ハートビート間隔</param>
+        /// <param name="token">CancellationToken</param>
+        /// <returns>作成したロビー</returns>
+        public async UniTask<Lobby> CreateLobbyWithHeartbeatAsync
+        (
+            string lobbyName,
+            int maxPlayers,
+            CreateLobbyOptions options,
+            float heartBeatDuration,
+            CancellationToken token
+        )
+        {
+            Lobby createdLobby = null;
+            createdLobby = await CreateLobbyAsync(lobbyName, maxPlayers, options);
+            _ = HeartbeatLobbyAsync(createdLobby.Id, heartBeatDuration, token);
+            return createdLobby;
         }
 
         /// <summary>
