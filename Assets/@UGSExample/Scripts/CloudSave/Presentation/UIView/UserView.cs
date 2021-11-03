@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using CloudSave.Application.Enumerate;
 using Denicode.UGSExample.CloudSave.Domain.Entity;
-using Shared.UIViewBase;
+using Denicode.UGSExample.Shared.UIViewBase;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;

@@ -1,6 +1,6 @@
 ﻿using UnityEngine.EventSystems;
 
-namespace Shared.UIViewBase
+namespace Denicode.UGSExample.Shared.UIViewBase
 {
     public abstract class UIViewBase : UIBehaviour
     {

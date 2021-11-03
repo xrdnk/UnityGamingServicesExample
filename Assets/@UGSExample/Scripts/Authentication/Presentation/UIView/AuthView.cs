@@ -1,6 +1,6 @@
 using System;
 using Cysharp.Threading.Tasks;
-using Shared.UIViewBase;
+using Denicode.UGSExample.Shared.UIViewBase;
 using UniRx;
 using UnityEngine.UI;
 using UnityEngine;

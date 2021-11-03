@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Shared.UIViewBase;
+using Denicode.UGSExample.Shared.UIViewBase;
 using UniRx;
 using UniRx.Triggers;
 using Unity.Services.Relay.Models;
