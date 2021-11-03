@@ -7,6 +7,7 @@ The following example has been implemented.
 - Unity Authentication
 - Unity Cloud Save
 - Unity Relay
+- Unity Lobby (Only Wrapper Script)
 
 ## Dependencies
 
