@@ -11,7 +11,7 @@ The following example has been implemented.
 
 ## Dependencies
 
-* Unity 2021.2.0f1
+* Unity 2021.2.1f1
 
 ## Third Party Assets
 
